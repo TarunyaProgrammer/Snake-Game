@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    overflow: hidden;
+    background: #091921;
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body::before{
+    z-index: -1;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(#e91e63, #ffc107);
+    clip-path: circle(22% at 30% 20%);
+}
+body::after{
+    z-index: -1;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(#ffffff, #e91e63, #da00ff);
+    clip-path: circle(17% at 70% 90%);
+}
+#scoreBox{
+    color: white;
+    position: absolute;
+    top: 9px;
+    right: 100px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'New Tegomin', serif;
+}
+
+#hiscoreBox{
+    color: white;
+    position: absolute;
+    top: 59px;
+    right: 100px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'New Tegomin', serif;
+}
+
+#board{
+    background: linear-gradient(rgb(160, 160, 160), transparent, transparent,transparent);
+    width: 88vmin;
+    height: 90vmin;
+    display: grid;
+    grid-template-rows: repeat(18, 1fr);
+    grid-template-columns: repeat(18, 1fr);
+    backdrop-filter: blur(5px);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.425);
+    box-shadow: 5px 5px 30px rgba(231, 231, 231, 0.9);
+}
+
+.head{
+    background: linear-gradient(#da00ff, #ffc107);
+    /* border: 2px solid rgb(34, 4, 34);  */
+    transform: scale(1.02);
+    border-radius: 9px;
+    box-shadow: 5px 5px 30px rgba(231, 231, 231, 0.9);
+}
+
+.snake{
+    background-color: green;
+    /* border: .25vmin solid white; */
+    border-radius: 50%;
+}
+
+.food{
+    background: linear-gradient(180deg, yellow, white);
+    /* border: .5vmin solid white; */
+    border-radius: 8px;
+    box-shadow: 5px 5px 30px rgba(231, 231, 231, 0.9);
+}

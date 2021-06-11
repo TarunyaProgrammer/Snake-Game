@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake out | Game ON</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="body">
+        <div id="board"></div>
+    </div>
+<div id="scoreBox">Score: 0</div>
+<div id="hiscoreBox">High Score: 0</div>
+    <script src="app.js"></script>
+
+            <script src="tilt.js"></script>            
+            <script>
+                VanillaTilt.init(document.getElementById("board"),{
+                    max: 25,
+                    speed: 400,
+                    glare: true,
+                    reset: true,
+                    "max-glare": 1
+                });
+            </script> 
+</body>
+</html>
